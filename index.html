@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dungeon Crawler Carl — Les 3 premiers étages</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">🌀 DUNGEON CRAWLER CARL <span class="sub">— mode découverte · étages 1 à 3</span></div>
+    <div id="hud">
+      <span id="hud-floor" class="chip">Étage 1</span>
+      <span id="hud-timer" class="chip warn">⏳ 5j 00:00</span>
+      <span id="hud-audience" class="chip">📺 0 spectateurs</span>
+    </div>
+  </header>
+
+  <main id="layout">
+    <section id="left">
+      <div id="viewport-wrap">
+        <canvas id="viewport" width="640" height="480"></canvas>
+        <div id="banner" class="hidden"></div>
+      </div>
+      <div id="dialog" class="hidden">
+        <div id="dialog-speaker"></div>
+        <div id="dialog-text"></div>
+        <div id="dialog-choices"></div>
+      </div>
+      <div id="controls-hint">⌨️ ZQSD / flèches : bouger · ESPACE : interagir · M : carte · Entrée : avancer le dialogue</div>
+    </section>
+
+    <aside id="right">
+      <div class="panel" id="panel-crawler">
+        <h2>🧑‍🚀 Carl <span id="crawler-level" class="chip">Niv. 1</span></h2>
+        <div class="bar"><label>PV</label><div class="track"><div id="hp-fill" class="fill hp"></div></div><span id="hp-text"></span></div>
+        <div class="bar"><label>PM</label><div class="track"><div id="mp-fill" class="fill mp"></div></div><span id="mp-text"></span></div>
+        <div class="bar"><label>XP</label><div class="track"><div id="xp-fill" class="fill xp"></div></div><span id="xp-text"></span></div>
+        <div id="stats"></div>
+      </div>
+      <div class="panel" id="panel-party">
+        <h2>👑 La Cour Royale de Princesse Donut</h2>
+        <div id="party-list"></div>
+      </div>
+      <div class="panel" id="panel-inventory">
+        <h2>🎒 Inventaire</h2>
+        <div id="inventory"></div>
+      </div>
+      <div class="panel" id="panel-log">
+        <h2>📜 Journal du donjon</h2>
+        <div id="log"></div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="map-overlay" class="hidden">
+    <canvas id="map-canvas" width="640" height="480"></canvas>
+    <div class="map-hint">M pour fermer — les salles déjà explorées restent visibles</div>
+  </div>
+
+  <div id="screen-title" class="screen">
+    <div class="screen-inner">
+      <h1>DUNGEON CRAWLER CARL</h1>
+      <p class="tagline">La Borant Corporation a transformé la Terre en donjon. Bienvenue, candidat n°4 122.</p>
+      <button id="btn-start" class="big-btn">⬇️ Descendre à l'étage 1</button>
+      <p class="foot">Un hommage web non officiel inspiré de l'univers de Matt Dinniman. Mode découverte : explore, combats, boss et choix narratifs des 3 premiers étages.</p>
+    </div>
+  </div>
+
+  <div id="screen-death" class="screen hidden">
+    <div class="screen-inner">
+      <h1 class="death">☠️ CANDIDAT ÉLIMINÉ</h1>
+      <p id="death-msg">Mort permanente dans le donjon. Comme le dit le règlement…</p>
+      <button id="btn-respawn" class="big-btn">🔄 Recommencer l'étage</button>
+    </div>
+  </div>
+
+  <div id="screen-victory" class="screen hidden">
+    <div class="screen-inner">
+      <h1 class="victory">🏆 ÉTAGE 3 CONQUÉRÉ !</h1>
+      <p id="victory-msg"></p>
+      <div id="victory-stats"></div>
+      <button id="btn-again" class="big-btn">🌀 Rejouer depuis l'étage 1</button>
+    </div>
+  </div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
