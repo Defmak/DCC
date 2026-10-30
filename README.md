@@ -1,5 +1,7 @@
 # 🌀 Dungeon Crawler Carl — Les 3 premiers étages (webgame)
 
+![Carl (niveau 1, FOR 5 · DEX 4 · CON 5 · INT 4 · SAG 3 · CHA 3) face à Grimaldi le Pestiféré — capture du webgame](assets/img/illustration-dcc.png)
+
 Un **jeu web en mode découverte** inspiré de la série LitRPG de Matt Dinniman
 (résumé basé sur [Wikipédia FR](https://fr.wikipedia.org/wiki/Dungeon_Crawler_Carl) et les wikis fans) :
 explore les **étages 1 à 3** du donjon avec Carl et la Cour Royale de Princesse Donut.
